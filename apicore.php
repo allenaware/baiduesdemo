@@ -1,28 +1,28 @@
 <?php
 /**
  * Baidu Api PHP client core service. Please change the define of DSPID, TOKEN before usage.
- * 
+ *
  * @author Baidu Api Team
  *
  */
 
 // Sandbox URL
-define('URL', 'https://apitest.es.baidu.com');
+// define('URL', 'https://apitest.es.baidu.com');
 // Online URL
-// define('URL', 'https://api.es.baidu.com');
+define('URL', 'https://api.es.baidu.com');
 
 //DSPID
-define('DSPID', 10789906);
+define('DSPID', 11234671);
 
 //TOKEN
-define('TOKEN', '066a0c9b539d61e373da6c91f07e2018');
+define('TOKEN', '3aa87e5b5b51be720f7f58aa6d591de7');
 
 class Baidu_Api_Client_Core {
 
 	private $url;
 
 	private $ch;
-	
+
 	public function __construct($serviceName) {
 		$this->url = URL . '/v1' . $serviceName;
 		$this->ch = curl_init($this->url);
@@ -32,25 +32,25 @@ class Baidu_Api_Client_Core {
 		curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($this->ch, CURLOPT_HTTPHEADER, array('content-type: application/json;charset=UTF-8'));
 	}
-	
+
 	public function post($request) {
 		// Show service definition
 		print('----------service url-----------');
 		print_r($this->getUrl());
 		print('----------service request json-----------');
 		print_r($request);
-		
+
 		curl_setopt($this->ch, CURLOPT_POSTFIELDS, $request);
-		
+
 		$result = curl_exec($this->ch);
-		
+
 		return $result;
 	}
-	
+
 	public function getUrl() {
 		return $this->url;
 	}
-	
+
 }
 
 
@@ -153,7 +153,7 @@ class APICreative
 	public $advertiserId;
 
 	public $binaryData;
-	
+
 }
 
 
