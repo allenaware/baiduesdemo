@@ -7,15 +7,15 @@
  */
 
 // Sandbox URL
-//define('URL', 'https://apitest.es.baidu.com');
+define('URL', 'https://apitest.es.baidu.com');
 // Online URL
-define('URL', 'https://api.es.baidu.com');
+// define('URL', 'https://api.es.baidu.com');
 
 //DSPID
-define('DSPID', 6173495);
+define('DSPID', 10789906);
 
 //TOKEN
-define('TOKEN', '9215d80c84d0d854b904d8ecb1f8b09a');
+define('TOKEN', '066a0c9b539d61e373da6c91f07e2018');
 
 class Baidu_Api_Client_Core {
 
