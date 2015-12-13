@@ -15,10 +15,10 @@ $service = new AdvertiserAddService();
 $request = new APIAdvertiserAddRequest();
 $advertiserList = array();
 $advertiser = new APIAdvertiser();
-$advertiser->advertiserId = 7;
+$advertiser->advertiserId = 8;
 
-$advertiser->advertiserName = mb_convert_encoding("Bayescom Test advertiser", "UTF-8", "gb2312");
-$advertiser->advertiserLiteName= mb_convert_encoding("Bayescom Test advertiser Lite Name", "UTF-8", "gb2312");
+$advertiser->advertiserName = mb_convert_encoding("117go", "UTF-8", "gb2312");
+$advertiser->advertiserLiteName= mb_convert_encoding("117go", "UTF-8", "gb2312");
 $advertiserList[] = $advertiser;
 
 $request->request = $advertiserList;
